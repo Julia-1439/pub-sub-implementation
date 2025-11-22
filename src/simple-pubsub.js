@@ -24,4 +24,4 @@ class SimplePubSub {
   }
 }
 
-export const pubSub = new SimplePubSub();
+export const simplePubSub = new SimplePubSub();
