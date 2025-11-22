@@ -1,3 +1,8 @@
+/**
+ * @see https://medium.com/@ignatovich.dm/implementing-the-pub-sub-pattern-in-javascript-a-guide-for-beginners-44714a76d8c7
+ * @module SimplePubSub implementation of the pubsub pattern. Limitation: 
+ * unsubscribing is difficult, which is fixed in the revised 'pubsub.js'.
+ */
 class SimplePubSub {
   #events; // map event names to subscribers
   constructor() {
