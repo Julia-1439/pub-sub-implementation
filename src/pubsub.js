@@ -7,14 +7,17 @@
 
 class PubSub {
   #events; // map event names to subscribers
+  #subscriberId;
   constructor() {
     this.#events = new Map();
+    this.#subscriberId = 0;
   }
 
   subscribe(event, callback) {
     if (!this.#events.has(event)) this.#events.set(event, new Set());
     const subscribers = this.#events.get(event);
-    const id = subscribers.size;
+    const id = this.#subscriberId;
+    this.#subscriberId++;
     subscribers.add({ id, callback });
     return id;
   }
